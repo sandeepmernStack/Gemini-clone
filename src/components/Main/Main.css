@@ -19,11 +19,16 @@
     display: none;
 }
 
+.loader{
+    display: flex;
+    flex-direction: column;
+}
+
 .loader hr{
     width: 100%;
     background: linear-gradient(130deg,rgb(94, 199, 229),rgb(240, 244, 240),rgb(92, 182, 238));
     height: 30px;
-    margin: 10px;
+    margin: 5px 0;
     animation: loader 3s infinite linear;
 }
 
@@ -59,12 +64,35 @@
     line-height: 1.8;
 }
 
+ .result div{
+    display: flex;
+    gap: 10px;
+    margin: 40px 0;
+    
+}
+
+.result div p{
+    line-height: 1.8;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.result-text{
+    align-items: center;
+}
+
+.result-data p{
+    max-height: 50vh;
+    overflow-y: scroll;
+}
 .greet span{
    
         background: linear-gradient(16deg, red, green);
         -webkit-text-fill-color: transparent; /* Makes the text transparent */
         -webkit-background-clip: text;
 }
+
+
 
 .cards{
     display: grid;

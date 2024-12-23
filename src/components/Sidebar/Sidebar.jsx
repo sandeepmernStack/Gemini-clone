@@ -3,14 +3,14 @@ import "./Sidebar.css"
 import { Context } from '../../context/context'
 function Sidebar() {
  const[extended, setExtended] = useState(true)
-const {prevChat} = useContext(Context)
+const {recentChat} = useContext(Context)
   return (
     <div className='sidebar'>
 
       <div className="sidebar-top">
 
       <i onClick={() => setExtended((prev) => !prev)}
- className="fa-solid fa-bars menu-icon"></i>
+      className="fa-solid fa-bars menu-icon"></i>
 
       <div className="new-chat">
       <i className="fa-solid fa-plus"></i>
@@ -19,10 +19,24 @@ const {prevChat} = useContext(Context)
 
       <div className="recent">
         <p className='recent-text'>Recent</p>
-        <div className="recent-item">
+
+
+        
+          
+        {
+  Array.isArray(recentChat) && recentChat.length > 0 ? (
+    recentChat.map((chat, index) => (
+      <div className="recent-item" key={index}>
         <i className="fa-regular fa-message"></i>
+        <p>{chat.slice(0,18)}..</p>
+      </div>
+    ))
+  ) : (
+    <p>No recent chats available.</p>
+  )
+}
+
        
-        </div>
       </div>
       </div>
 
