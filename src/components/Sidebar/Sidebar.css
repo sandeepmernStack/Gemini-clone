@@ -1,0 +1,48 @@
+.sidebar{
+    padding: 25px 15px;
+    background-color: #f2eaea;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.sidebar .sidebar-top{
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-top .new-chat{
+    display: flex;
+    gap: 10px;
+    background: #ebcd;
+    cursor: pointer;
+    padding: 10px 19px;
+    border-radius: 30px;
+}
+
+.sidebar .recent{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar .recent-item{
+    
+    cursor: pointer;
+    
+}
+
+.sidebar .sidebar-bottom{
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.recent-item span{
+   margin-left:20px ;
+
+}
